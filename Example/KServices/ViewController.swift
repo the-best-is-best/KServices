@@ -7,12 +7,24 @@
 //
 
 import UIKit
-
+import KServices
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        do {
+            //            try KServices.save(service: "myServices", account: "michelle", data: "somthing$as".data(using: .utf8)!
+            //            )
+            //            print("saved")
+            
+            if let data = try KServices.get(service: "myServices", account: "michelle") {
+                print("data is \(data)") // This will print the actual value without "Optional"
+            } else {
+                print("No data found")
+            }
+        } catch {
+            print(error)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,0 +1,5 @@
+ if let data = try KServices.get(service: "myServices", account: "michelle") {
+        print("data is \(data)") // This will print the actual value without "Optional"
+    } else {
+        print("No data found")
+    }
