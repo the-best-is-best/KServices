@@ -10,7 +10,7 @@
 		25D19E8C2E5C0B3DDA66CDD1CD3FB1FC /* Pods-KServices_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9488A0486C2E3681E1D49383078C14ED /* Pods-KServices_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38098FBFBF4D6A4DBF2DC58DDE233B1D /* Pods-KServices_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34A87D25F93562F81827867B9D3AB4 /* Pods-KServices_Example-dummy.m */; };
 		3F7459398DF87452624153AFD27B642E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		41B177352C99605400EE98EA /* KServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B177342C99605400EE98EA /* KServices.swift */; };
+		414B21082C997D4F000B1797 /* KServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B21072C997D4F000B1797 /* KServices.swift */; };
 		64C8780BA33566890F72C4A24D6F0751 /* KServices-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1749069E5DC41548AD781E884EB04CE3 /* KServices-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		658FA861CE754EDB087266D31EBC9D98 /* Pods-KServices_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FD29BD63A0F598486CD8299A384A8 /* Pods-KServices_Tests-dummy.m */; };
 		98028141631E2DE47EC876D22B8B5CAF /* KServices-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D62A072ECA1BC1BF06C516DC5E34CD /* KServices-dummy.m */; };
@@ -50,7 +50,7 @@
 		2F34A87D25F93562F81827867B9D3AB4 /* Pods-KServices_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KServices_Example-dummy.m"; sourceTree = "<group>"; };
 		314FD29BD63A0F598486CD8299A384A8 /* Pods-KServices_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KServices_Tests-dummy.m"; sourceTree = "<group>"; };
 		3D5EFD5E5B40F16BB64675CDD27802DA /* Pods-KServices_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KServices_Example-Info.plist"; sourceTree = "<group>"; };
-		41B177342C99605400EE98EA /* KServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KServices.swift; sourceTree = "<group>"; };
+		414B21072C997D4F000B1797 /* KServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KServices.swift; path = KServices/Classes/KServices.swift; sourceTree = "<group>"; };
 		4C235DE247600B23B86D0CF6A1DD8AB5 /* Pods-KServices_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KServices_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		77F0E6ECBEEA25DA6AB22A9FF395A1DA /* Pods-KServices_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KServices_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,9 +198,9 @@
 		D3C1F13E8419EFFE107B51899FF3CDCF /* KServices */ = {
 			isa = PBXGroup;
 			children = (
-				41B177342C99605400EE98EA /* KServices.swift */,
 				30078EAD85242B0177A472FB05C46808 /* Pod */,
 				0782D7674D3D62FB89034AC6E7359676 /* Support Files */,
+				414B21072C997D4F000B1797 /* KServices.swift */,
 			);
 			name = KServices;
 			path = ../..;
@@ -389,7 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98028141631E2DE47EC876D22B8B5CAF /* KServices-dummy.m in Sources */,
-				41B177352C99605400EE98EA /* KServices.swift in Sources */,
+				414B21082C997D4F000B1797 /* KServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
