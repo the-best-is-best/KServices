@@ -8,36 +8,17 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KServices'
-  s.version          = '0.1.1'
-  s.summary          = 'KServices for save or load data KeyChain.'
+  s.version          = '0.1.2'
+  s.summary          = 'KServices for save or load data from KeyChain.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = "KServices for save or load data from KeyChain"
-
+  s.description      = 'KServices for save or load data from KeyChain'
   s.homepage         = 'https://github.com/the-best-is-best/KServices'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.authors                  =  { 'the-best-is-best' => 'michelle.raouf@outlook.com' }
+  s.authors          = { 'the-best-is-best' => 'michelle.raouf@outlook.com' }
   s.source           = { :git => 'https://github.com/the-best-is-best/KServices.git', :tag => s.version.to_s }
-
-  s.swift_version            = '5.5'
-
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.swift_version    = '5.5'
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'KServices/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'KServices' => ['KServices/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files     = 'KServices/Classes/**/*'
+  s.ios.frameworks   = 'UIKit'
 end
