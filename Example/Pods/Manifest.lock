@@ -1,5 +1,5 @@
 PODS:
-  - KServices (0.1.2)
+  - KServices (0.1.3)
 
 DEPENDENCIES:
   - KServices (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KServices: 4e66bed18dc0ea4d032d4cebf072c401a67bad71
+  KServices: 8c2a279e7da597e904cfdb1dc0559a0ece071049
 
 PODFILE CHECKSUM: 7fbb4097afcf64e1a074ad9ba7784e2a9be9466e
 

@@ -1,24 +1,15 @@
-//
-//  KServices.swift
-//  Pods
-//
-//  Created by Michelle Raouf on 17/09/2024.
-//
+import Foundation
 
-//
-//  KServices.swift
-//  Pods
-//
-//  Created by Michelle Raouf on 17/09/2024.
-//
-
-@objc public class KServices: NSObject {
-    public typealias GetCompletion = (String?, Error?) -> Void
+@objc(KServices)
+public class KServices: NSObject {
+    public typealias GetCompletion = (Data?, Error?) -> Void
     public typealias SaveCompletion = (Error?) -> Void
 
     enum KeychainError: Error {
         case duplicateEntity
         case unknown(OSStatus)
+        case noData
+        case unexpectedData
     }
     
     @objc public static func save(
@@ -48,19 +39,36 @@
     @objc public static func get(service: String, account: String, completion: @escaping GetCompletion) {
         do {
             let data = try retrieveData(service: service, account: account)
-            let dataString = String(data: data, encoding: .utf8)
-            completion(dataString, nil)
+            completion(data, nil)
         } catch {
             completion(nil, error)
         }
     }
     
     private static func retrieveData(service: String, account: String) throws -> Data {
-        if service == "validService" && account == "validAccount" {
-            return "ValidData".data(using: .utf8)!
-        } else {
-            throw NSError(domain: "com.example.KServices", code: 1, userInfo: [NSLocalizedDescriptionKey: "Data retrieval failed"])
+        let query: [String: AnyObject] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service as AnyObject,
+            kSecAttrAccount as String: account as AnyObject,
+            kSecReturnData as String: kCFBooleanTrue,
+            kSecMatchLimit as String: kSecMatchLimitOne
+        ]
+        
+        var item: CFTypeRef?
+        let status = SecItemCopyMatching(query as CFDictionary, &item)
+        
+        switch status {
+        case errSecSuccess:
+            guard let data = item as? Data else {
+                throw KeychainError.unexpectedData
+            }
+            return data
+            
+        case errSecItemNotFound:
+            throw KeychainError.noData
+            
+        default:
+            throw KeychainError.unknown(status)
         }
     }
 }
-

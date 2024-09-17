@@ -14,19 +14,26 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            //            try KServices.save(service: "myServices", account: "michelle", data: "somthing$as".data(using: .utf8)!
-            //            )
-            //            print("saved")
-            
-            if let data = try KServices.get(service: "myServices", account: "michelle") {
-                print("data is \(data)") // This will print the actual value without "Optional"
-            } else {
-                print("No data found")
+        KServices.get(service: "myServices", account: "michelle") { data, error in
+                if let error = error {
+                    print("Failed to retrieve data: \(error)")
+                } else if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                    print("Retrieved data: \(dataString)")
+                } else {
+                    print("No data found")
+                }
             }
-        } catch {
-            print(error)
-        }
+        
+//        KServices.save(service: "myServices", account: "michelle", data: "Michelle is kmm".data(using: .utf8)!) { error in
+//            if let error = error {
+//                print("Failed to save data: \(error)")
+//            } else {
+//                print("Data saved successfully")
+//
+//            }
+//        }
+
+        
     }
 
     override func didReceiveMemoryWarning() {
