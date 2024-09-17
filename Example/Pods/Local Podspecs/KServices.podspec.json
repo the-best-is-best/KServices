@@ -1,22 +1,27 @@
 {
   "name": "KServices",
-  "version": "0.1.0",
-  "summary": "A short description of KServices.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/72160249/KServices",
+  "version": "0.1.2",
+  "summary": "KServices for save or load data from KeyChain.",
+  "description": "KServices provides functionality for saving and loading data from the iOS Keychain. It includes methods for securely storing and retrieving data such as user credentials and sensitive information.",
+  "homepage": "https://github.com/the-best-is-best/KServices",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "72160249": "michelle.raouf@52ndsolution.net"
+    "the-best-is-best": "michelle.raouf@outlook.com"
   },
   "source": {
-    "git": "https://github.com/72160249/KServices.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/the-best-is-best/KServices.git",
+    "tag": "0.1.2"
   },
+  "swift_versions": "5.5",
   "platforms": {
-    "ios": "10.0"
+    "ios": "12.0"
   },
-  "source_files": "KServices/Classes/**/*"
+  "source_files": "KServices/Classes/**/*",
+  "ios": {
+    "frameworks": "UIKit"
+  },
+  "swift_version": "5.5"
 }

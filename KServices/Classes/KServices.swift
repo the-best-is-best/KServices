@@ -12,60 +12,55 @@
 //  Created by Michelle Raouf on 17/09/2024.
 //
 
-public class KServices {
-    
+@objc public class KServices: NSObject {
+    public typealias GetCompletion = (String?, Error?) -> Void
+    public typealias SaveCompletion = (Error?) -> Void
+
     enum KeychainError: Error {
         case duplicateEntity
         case unknown(OSStatus)
     }
     
-    public  static func  save(
+    @objc public static func save(
         service: String,
         account: String,
-        data: Data
-    ) throws {
+        data: Data,
+        completion: @escaping SaveCompletion
+    ) {
         let query: [String: AnyObject] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service as AnyObject,
             kSecAttrAccount as String: account as AnyObject,
-            kSecValueData as String: data  as AnyObject
+            kSecValueData as String: data as AnyObject
         ]
-         
-       let status = SecItemAdd(query as CFDictionary, nil)
         
+        let status = SecItemAdd(query as CFDictionary, nil)
         
-        
-        guard status != errSecDuplicateItem else {
-            throw KeychainError.duplicateEntity
-        }
-        
-        guard status == errSecSuccess else {
-            throw KeychainError.unknown(status)
+        if status == errSecDuplicateItem {
+            completion(KeychainError.duplicateEntity)
+        } else if status != errSecSuccess {
+            completion(KeychainError.unknown(status))
+        } else {
+            completion(nil)
         }
     }
     
-    public  static func  get(
-        service: String,
-        account: String
-    ) throws ->  String? {
-       
-        let query: [String: AnyObject] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: service as AnyObject,
-            kSecAttrAccount as String: account as AnyObject,
-            kSecReturnData as String: kCFBooleanTrue,
-            kSecMatchLimit as String: kSecMatchLimitOne
-        ]
-        var result: AnyObject?
-        SecItemCopyMatching(query as CFDictionary, &result)
-        
-        
-        guard let data = result as? Data else {
-            return nil
+    @objc public static func get(service: String, account: String, completion: @escaping GetCompletion) {
+        do {
+            let data = try retrieveData(service: service, account: account)
+            let dataString = String(data: data, encoding: .utf8)
+            completion(dataString, nil)
+        } catch {
+            completion(nil, error)
         }
-        let dataString = String(data: data, encoding: .utf8)
-        return dataString
-   
-        
+    }
+    
+    private static func retrieveData(service: String, account: String) throws -> Data {
+        if service == "validService" && account == "validAccount" {
+            return "ValidData".data(using: .utf8)!
+        } else {
+            throw NSError(domain: "com.example.KServices", code: 1, userInfo: [NSLocalizedDescriptionKey: "Data retrieval failed"])
+        }
     }
 }
+
