@@ -57,7 +57,7 @@ public class KServices {
             kSecMatchLimit as String: kSecMatchLimitOne
         ]
         var result: AnyObject?
-        let status = SecItemCopyMatching(query as CFDictionary, &result)
+        SecItemCopyMatching(query as CFDictionary, &result)
         
         
         guard let data = result as? Data else {

@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.version          = '0.1.2'
   s.summary          = 'KServices for save or load data from KeyChain.'
 
-  s.description      = 'KServices for save or load data from KeyChain'
+  s.description = 'KServices provides functionality for saving and loading data from the iOS Keychain. It includes methods for securely storing and retrieving data such as user credentials and sensitive information.'
   s.homepage         = 'https://github.com/the-best-is-best/KServices'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.authors          = { 'the-best-is-best' => 'michelle.raouf@outlook.com' }
