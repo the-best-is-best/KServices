@@ -23,10 +23,10 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.authors                  =  { 'the-best-is-best' => 'michelle.raouf@outlook.com' }
-  s.source           = { :git => 'https://github.com/72160249/KServices.git', :tag => s.version.to_s
+  s.source           = { :git => 'https://github.com/the-best-is-best/KServices.git', :tag => s.version.to_s }
+
   s.swift_version            = '5.5'
 
-  }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.0'
