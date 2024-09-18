@@ -14,24 +14,30 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        KServices.get(service: "myServices", account: "michelle") { data, error in
-                if let error = error {
-                    print("Failed to retrieve data: \(error)")
-                } else if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                    print("Retrieved data: \(dataString)")
-                } else {
-                    print("No data found")
+      
+        let service = "exampleService"
+        let account = "exampleAccount"
+        let data = "ExampleData"
+
+        // Save data to the keychain
+        KServices.save(service: service, account: account, data: data) { error in
+            if let error = error {
+                print("Failed to save data with error: \(error)")
+            } else {
+                print("Data saved successfully!")
+                
+                // Retrieve the saved data
+                KServices.get(service: service, account: account) { result, error in
+                    if let error = error {
+                        print("Failed to retrieve data with error: \(error)")
+                    } else if let result = result {
+                        print("Retrieved data: \(result)")
+                    } else {
+                        print("No data found.")
+                    }
                 }
             }
-        
-    //    KServices.save(service: "myServices", account: "michelle", data: "i'm micelle".data(using: .utf8)!) { error in
-    //        if let error = error {
-    //            print("Failed to save data: \(error)")
-    //        } else {
-    //            print("Data saved successfully")
-
-    //        }
-    //    }
+        }
 
         
     }
