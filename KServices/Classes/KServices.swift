@@ -1,7 +1,6 @@
 import Foundation
 
-@objc(KServices)
-public class KServices: NSObject {
+@objc public class KServices: NSObject {
     public typealias GetCompletion = (Data?, Error?) -> Void
     public typealias SaveCompletion = (Error?) -> Void
 

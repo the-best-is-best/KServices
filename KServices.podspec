@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KServices'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'KServices for save or load data from KeyChain.'
 
   s.description = 'KServices provides functionality for saving and loading data from the iOS Keychain. It includes methods for securely storing and retrieving data such as user credentials and sensitive information.'
