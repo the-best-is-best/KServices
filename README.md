@@ -134,6 +134,9 @@ actual class KMMCrypto {
 }
 ```
 
+## available in maven go to this  <a href="https://github.com/the-best-is-best/kmm-crypto"> link </a>for more information
+
+
 ## Author
 
 Michelle Raouf, <eng.michelle.raouf@gmail.com>
