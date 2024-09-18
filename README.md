@@ -54,6 +54,10 @@ pod 'KServices'
 
 <a href="https://kotlinlang.org/docs/native-cocoapods.html"> See configuration cocoapods in gradle</a>
 
+## Note
+
+### Need make pod init in iosApp and add this package in pod and install it first
+
 ```gradle
 kotlin {
     cocoapods {
