@@ -17,21 +17,22 @@ class ViewController: UIViewController {
       
         let service = "exampleService"
         let account = "exampleAccount"
-        let data = "ExampleData"
+        let data = "ExampleData".data(using: .utf8)!
 
         // Save data to the keychain
-        KServices.save(service: service, account: account, data: data) { error in
+        KServices.saveDataType(service: service, account: account, data: data) { error in
             if let error = error {
                 print("Failed to save data with error: \(error)")
             } else {
                 print("Data saved successfully!")
                 
                 // Retrieve the saved data
-                KServices.get(service: service, account: account) { result, error in
+                KServices.getDataType(service: service, account: account) { result, error in
                     if let error = error {
                         print("Failed to retrieve data with error: \(error)")
                     } else if let result = result {
-                        print("Retrieved data: \(result)")
+                        
+                        print("Retrieved data: \(String(data: result , encoding: .utf8)!)")
                     } else {
                         print("No data found.")
                     }
