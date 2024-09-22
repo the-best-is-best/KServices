@@ -1,5 +1,4 @@
 import XCTest
-import KServices
 
 class Tests: XCTestCase {
     
