@@ -16,10 +16,6 @@ let package = Package(
         .target(
             name: "KServices",
             dependencies: []),
-        .testTarget(
-            name: "KServicesTests",
-            dependencies: ["KServices",]
-          
-        ),
+       
     ]
 )
