@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BE0428C1C61DC5D612D1DAD /* Pods_KServices_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B4C091603192A8C4A229A4 /* Pods_KServices_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -27,8 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17CD23A0C600DFB774DAF4F0 /* Pods-KServices_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KServices_Example.debug.xcconfig"; path = "Target Support Files/Pods-KServices_Example/Pods-KServices_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3A5772D5C9FC2A03AAC89253 /* Pods-KServices_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KServices_Example.release.xcconfig"; path = "Target Support Files/Pods-KServices_Example/Pods-KServices_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2519BD03321B6D28B1CFF00F /* Pods-KServices_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KServices_Tests.release.xcconfig"; path = "Target Support Files/Pods-KServices_Tests/Pods-KServices_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		41C5CE2C2CA0A340000F302F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		4DC8905164DB064754181464 /* Pods_KServices_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KServices_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5606128D262ECE6A16703A18 /* KServices.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KServices.podspec; path = ../KServices.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -42,6 +42,10 @@
 		607FACE51AFB9204008FA782 /* KServices_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KServices_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		70D912E250872857329A9FFA /* Pods-KServices_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KServices_Example.debug.xcconfig"; path = "Target Support Files/Pods-KServices_Example/Pods-KServices_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		92B4C091603192A8C4A229A4 /* Pods_KServices_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KServices_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C53E983F97C0219C7842F3 /* Pods-KServices_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KServices_Tests.debug.xcconfig"; path = "Target Support Files/Pods-KServices_Tests/Pods-KServices_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B964B6DEE72B215C646A4F38 /* Pods-KServices_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KServices_Example.release.xcconfig"; path = "Target Support Files/Pods-KServices_Example/Pods-KServices_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DBC42C4713CBD529DBEBF333 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E7C4AFC098EC371BA2515722 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE0428C1C61DC5D612D1DAD /* Pods_KServices_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				4DC8905164DB064754181464 /* Pods_KServices_Example.framework */,
+				92B4C091603192A8C4A229A4 /* Pods_KServices_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,8 +87,8 @@
 				607FACD21AFB9204008FA782 /* Example for KServices */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
+				88B84E90FC51B3314F8510A6 /* Pods */,
 				12DE4107124DDBB354A5C2B5 /* Frameworks */,
-				785B13EAF44879DD9EBDC13F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,11 +150,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		785B13EAF44879DD9EBDC13F /* Pods */ = {
+		88B84E90FC51B3314F8510A6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				17CD23A0C600DFB774DAF4F0 /* Pods-KServices_Example.debug.xcconfig */,
-				3A5772D5C9FC2A03AAC89253 /* Pods-KServices_Example.release.xcconfig */,
+				70D912E250872857329A9FFA /* Pods-KServices_Example.debug.xcconfig */,
+				B964B6DEE72B215C646A4F38 /* Pods-KServices_Example.release.xcconfig */,
+				92C53E983F97C0219C7842F3 /* Pods-KServices_Tests.debug.xcconfig */,
+				2519BD03321B6D28B1CFF00F /* Pods-KServices_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -164,7 +172,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				94A5723A9EABDDE63D8B9923 /* [CP] Embed Pods Frameworks */,
+				376D99685791409B61503D5D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +187,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "KServices_Tests" */;
 			buildPhases = (
+				A72AF3C5C8D29A0EB506019D /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -256,7 +265,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		94A5723A9EABDDE63D8B9923 /* [CP] Embed Pods Frameworks */ = {
+		376D99685791409B61503D5D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,6 +281,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KServices_Example/Pods-KServices_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A72AF3C5C8D29A0EB506019D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KServices_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F988B72FAFCB0AC175504160 /* [CP] Check Pods Manifest.lock */ = {
@@ -458,7 +489,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17CD23A0C600DFB774DAF4F0 /* Pods-KServices_Example.debug.xcconfig */;
+			baseConfigurationReference = 70D912E250872857329A9FFA /* Pods-KServices_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -485,7 +516,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A5772D5C9FC2A03AAC89253 /* Pods-KServices_Example.release.xcconfig */;
+			baseConfigurationReference = B964B6DEE72B215C646A4F38 /* Pods-KServices_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -512,6 +543,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C53E983F97C0219C7842F3 /* Pods-KServices_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -532,7 +564,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -545,6 +577,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2519BD03321B6D28B1CFF00F /* Pods-KServices_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -561,7 +594,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = NO;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
