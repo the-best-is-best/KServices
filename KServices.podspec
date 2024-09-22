@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KServices'
-  s.version          = '0.1.9'
+  s.version          = '0.1.10'
   s.summary          = 'KServices for save or load data from KeyChain.'
 
   s.description = 'KServices provides functionality for saving and loading data from the iOS Keychain. It includes methods for securely storing and retrieving data such as user credentials and sensitive information.'
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   s.swift_version    = '5.5'
   s.ios.deployment_target = '12.0'
 
-  s.source_files     = 'KServices/Classes/**/*'
+  s.source_files     = 'Sources/KServices/**/*'
   s.ios.frameworks   = 'UIKit'
 end

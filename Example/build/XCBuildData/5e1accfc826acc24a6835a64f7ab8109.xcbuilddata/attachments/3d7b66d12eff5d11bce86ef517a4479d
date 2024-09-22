@@ -1,0 +1,11 @@
+framework module KServices {
+  umbrella header "KServices-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module KServices.Swift {
+  header "KServices-Swift.h"
+  requires objc
+}

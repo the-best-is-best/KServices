@@ -1,0 +1,56 @@
+{
+  "main_library": {
+    "exported_symbols": [
+      {
+        "data": {
+          "global": [
+            "_$s9KServicesAACN",
+            "_$s9KServicesAAC4save7service7account4data10completionySS_S2Sys5Error_pSgctFZ",
+            "_$s9KServicesAACABycfc",
+            "_$s9KServicesAAC12saveDataType7service7account4data10completionySS_SS10Foundation0C0Vys5Error_pSgctFZ",
+            "_$s9KServicesAACMn",
+            "_$s9KServicesAACABycfC",
+            "_KServicesVersionNumber",
+            "_$s9KServicesAAC7getData7service7account10completionySS_SSy10Foundation0C0VSg_s5Error_pSgtctFZ",
+            "_$s9KServicesAAC13KeychainErrorOMn",
+            "_$s9KServicesAAC13KeychainErrorOMa",
+            "_$s9KServicesAAC13KeychainErrorOs0C0AAMc",
+            "_$s9KServicesAAC3get7service7account10completionySS_SSySSSg_s5Error_pSgtctFZ",
+            "_$s9KServicesAACfD",
+            "_KServicesVersionString",
+            "_$s9KServicesAAC13KeychainErrorON",
+            "_$s9KServicesAACMa"
+          ],
+          "objc_class": [
+            "PodsDummy_KServices",
+            "_TtC9KServices9KServices"
+          ]
+        }
+      }
+    ],
+    "flags": [
+      {
+        "attributes": [
+          "not_app_extension_safe"
+        ]
+      }
+    ],
+    "install_names": [
+      {
+        "name": "@rpath/KServices.framework/KServices"
+      }
+    ],
+    "swift_abi": [
+      {
+        "abi": 7
+      }
+    ],
+    "target_info": [
+      {
+        "min_deployment": "14",
+        "target": "arm64-ios-simulator"
+      }
+    ]
+  },
+  "tapi_tbd_version": 5
+}

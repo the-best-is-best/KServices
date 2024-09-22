@@ -1,0 +1,10 @@
+framework module KServices {
+  umbrella header "KServices-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module KServices.__Swift {
+  exclude header "KServices-Swift.h"
+}

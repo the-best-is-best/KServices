@@ -1,16 +1,3 @@
-PODS:
-  - KServices (0.1.9)
-
-DEPENDENCIES:
-  - KServices (from `../`)
-
-EXTERNAL SOURCES:
-  KServices:
-    :path: "../"
-
-SPEC CHECKSUMS:
-  KServices: 33c959448290e96cbd54a093d079dbf107d91573
-
-PODFILE CHECKSUM: 7fbb4097afcf64e1a074ad9ba7784e2a9be9466e
+PODFILE CHECKSUM: 0032d2414f9fe7586b481318f9c50c1d4194fcdf
 
 COCOAPODS: 1.15.2

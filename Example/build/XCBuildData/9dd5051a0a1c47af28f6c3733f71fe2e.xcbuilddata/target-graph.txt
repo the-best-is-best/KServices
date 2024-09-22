@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Target 'Pods-KServices_Tests' in project 'Pods'
+➜ Explicit dependency on target 'Pods-KServices_Example' in project 'Pods'
+Target 'Pods-KServices_Example' in project 'Pods'
+➜ Explicit dependency on target 'KServices' in project 'Pods'
+Target 'KServices' in project 'Pods' (no dependencies)

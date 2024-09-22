@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/michelleraouf/Desktop/ios/KServices/Example/build/Debug-iphonesimulator/KServices/KServices.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/michelleraouf/Desktop/ios/KServices/Example/build/Pods.build/Debug-iphonesimulator/KServices.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/michelleraouf/Desktop/ios/KServices/Example/build/Debug-iphonesimulator/KServices/KServices.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "KServices-Swift.h",
+      'external-contents': "/Users/michelleraouf/Desktop/ios/KServices/Example/build/Pods.build/Debug-iphonesimulator/KServices.build/unextended-interface-header.h",
+    }]
+    }]
+}
