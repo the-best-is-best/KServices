@@ -3,6 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "KServices",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v12)
     ],
