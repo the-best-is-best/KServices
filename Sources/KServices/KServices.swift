@@ -44,28 +44,32 @@ import Foundation
                kSecAttrService as String: service as AnyObject,
                kSecAttrAccount as String: account as AnyObject
            ]
-           
-           let status = SecItemAdd(query as CFDictionary, nil)
-           
-           if status == errSecDuplicateItem {
-               // If the item already exists, update the existing item
-               let attributesToUpdate: [String: AnyObject] = [
-                   kSecValueData as String: dataAsData as AnyObject
-               ]
-               
-               let updateStatus = SecItemUpdate(query as CFDictionary, attributesToUpdate as CFDictionary)
-               
-               if updateStatus != errSecSuccess {
-                   completion(KeychainError.unknown(updateStatus))
+
+           let attributesToUpdate: [String: AnyObject] = [
+               kSecValueData as String: dataAsData as AnyObject
+           ]
+
+           let status = SecItemUpdate(query as CFDictionary, attributesToUpdate as CFDictionary)
+
+           if status == errSecItemNotFound {
+               // إذا لم يتم العثور على العنصر، قم بإضافته
+               var newQuery = query
+               newQuery[kSecValueData as String] = dataAsData as AnyObject  // التصحيح هنا
+
+               let addStatus = SecItemAdd(newQuery as CFDictionary, nil)
+
+               if addStatus != errSecSuccess {
+                   completion(KeychainError.unknown(addStatus))
                } else {
-                   completion(nil)  // Successfully updated
+                   completion(nil)
                }
            } else if status != errSecSuccess {
                completion(KeychainError.unknown(status))
            } else {
-               completion(nil)  // Successfully added
+               completion(nil)
            }
        }
+
     
     @objc public static func saveDataType(
         service: String,
