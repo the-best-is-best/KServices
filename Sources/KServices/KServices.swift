@@ -20,12 +20,23 @@ import Foundation
 
     public typealias SaveCompletion = (Error?) -> Void
 
-    enum KeychainError: Error {
-//        case duplicateEntity
-        case unknown(OSStatus)
-         case noData
-        case unexpectedData
+    @objc public enum KeychainError: Int, Error {
+        case unknown = -1
+        case noData = 1
+        case unexpectedData = 2
+
+        public func description() -> String {
+            switch self {
+            case .unknown:
+                return "Unknown error"
+            case .noData:
+                return "No data found"
+            case .unexpectedData:
+                return "Unexpected data found"
+            }
+        }
     }
+
     
     @objc public static func save(
            service: String,
@@ -35,7 +46,7 @@ import Foundation
        ) {
            // Convert the String to Data using utf8 encoding
            guard let dataAsData = data.data(using: .utf8) else {
-               completion(KeychainError.unknown(-1))  // Handle conversion failure
+               completion(KeychainError.unknown)  // Handle conversion failure
                return
            }
            
@@ -59,12 +70,12 @@ import Foundation
                let addStatus = SecItemAdd(newQuery as CFDictionary, nil)
 
                if addStatus != errSecSuccess {
-                   completion(KeychainError.unknown(addStatus))
+                   completion(KeychainError.unknown)
                } else {
                    completion(nil)
                }
            } else if status != errSecSuccess {
-               completion(KeychainError.unknown(status))
+               completion(KeychainError.unknown)
            } else {
                completion(nil)
            }
@@ -96,12 +107,12 @@ import Foundation
             let addStatus = SecItemAdd(newQuery as CFDictionary, nil)
 
             if addStatus != errSecSuccess {
-                completion(KeychainError.unknown(addStatus))
+                completion(KeychainError.unknown)
             } else {
                 completion(nil)
             }
         } else if status != errSecSuccess {
-            completion(KeychainError.unknown(status))
+            completion(KeychainError.unknown)
         } else {
             completion(nil)
         }
@@ -151,7 +162,7 @@ import Foundation
             throw KeychainError.noData
             
         default:
-            throw KeychainError.unknown(status)
+            throw KeychainError.unknown
         }
     }
     

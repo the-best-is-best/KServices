@@ -17,22 +17,22 @@ class ViewController: UIViewController {
       
         let service = "exampleService1"
         let account = "exampleAccount1"
-        let data = "sdsds".data(using: .utf8)!
+        let data = "sdsds"
 
         // Save data to the keychain
-        KServices.saveDataType(service: service, account: account, data: data) { error in
+        KServices.save(service: service, account: account, data: data) { error in
             if let error = error {
                 print("Failed to save data with error: \(error)")
             } else {
                 print("Data saved successfully!")
                 
                 // Retrieve the saved data
-                KServices.getDataType(service: service, account: account) { result, error in
+                KServices.get(service: service, account: account) { result, error in
                     if let error = error {
                         print("Failed to retrieve data with error: \(error)")
                     } else if let result = result {
                         
-                        print("Retrieved data: \(String(data: result , encoding: .utf8)!)")
+                        print("Retrieved data: \(result)")
                     } else {
                         print("No data found.")
                     }
@@ -41,12 +41,12 @@ class ViewController: UIViewController {
         }
         KServices.deleteData(service: service, account: account)
         
-        KServices.getDataType(service: service, account: account) { result, error in
+        KServices.get(service: service, account: account) { result, error in
             if let error = error {
                 print("Failed to retrieve data with error: \(error)")
             } else if let result = result {
                 
-                print("Retrieved data: \(String(data: result , encoding: .utf8)!)")
+                print("Retrieved data: \(result)")
             } else {
                 print("No data found.")
             }
